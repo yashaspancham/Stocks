@@ -1,0 +1,77 @@
+           Unnamed: 0 Dec 2019 Mar 2020 Jun 2020 Sep 2020 Dec 2020  ... Sep 2021 Dec 2021 Mar 2022 Jun 2022 Sep 2022 Dec 2022
+0             Sales +      214      234       74      191      160  ...      107      134      327       76      217       67
+1          Expenses +      182      319       59      183      146  ...      111      130      315       75      207      149
+2    Operating Profit       32      -85       15        9       14  ...       -4        4       12        1       10      -82
+3               OPM %      15%     -36%      20%       4%       9%  ...      -3%       3%       4%       1%       5%    -122%
+4      Other Income +        2      -87        0        5        2  ...       14        2        6        6        0        1
+5            Interest       23       16       19       22       18  ...       15       15       13        4        3        3
+6        Depreciation        1        1        0        0        0  ...        0        0        0        0        0        0
+7   Profit before tax       11     -190       -4       -9       -2  ...       -5       -9        4        2        7      -84
+8               Tax %      15%     -11%       9%      -9%     -20%  ...       2%       1%      -5%      20%      -1%       0%
+9        Net Profit +        9     -211       -4      -10       -2  ...       -5       -9        4        1        7      -84
+10          EPS in Rs     0.59   -13.38    -0.24    -0.63    -0.14  ...    -0.33    -0.56     0.28     0.09     0.46    -5.34
+11            Raw PDF      NaN      NaN      NaN      NaN      NaN  ...      NaN      NaN      NaN      NaN      NaN      NaN
+
+[12 rows x 14 columns]           Unnamed: 0 Mar 2011 Mar 2012 Mar 2013 Mar 2014 Mar 2015  ... Mar 2018 Mar 2019 Mar 2020 Mar 2021 Mar 2022    TTM
+0             Sales +     1081     1030     1036      914      840  ...      547      614      781      636      557    687
+1          Expenses +      870      913      908      845      777  ...      499      549      802      628      530    746
+2    Operating Profit      210      117      128       69       63  ...       48       64      -21        8       28    -59
+3               OPM %      19%      11%      12%       8%       8%  ...       9%      10%      -3%       1%       5%    -9%
+4      Other Income +       16       19        9        6        2  ...       -7       11      -76       39       21     13
+5            Interest      103       83       64       38       28  ...      102      125       85       66       59     24
+6        Depreciation        9       10       10       10        7  ...        3        2        2        1        1      1
+7   Profit before tax      115       43       63       27       30  ...      -64      -52     -184      -20      -11    -71
+8               Tax %      34%      20%      30%      50%      28%  ...      40%     -16%     -10%       3%       4%    NaN
+9        Net Profit +       76       35       44       14       22  ...      -39      -60     -204      -20      -10    -71
+10          EPS in Rs     4.84     2.20     2.81     0.86     1.39  ...    -2.45    -3.82   -12.94    -1.25    -0.67  -4.51
+11  Dividend Payout %      10%       0%       0%       0%       0%  ...       0%       0%       0%       0%       0%    NaN
+
+[12 rows x 14 columns]  Compounded Sales Growth Compounded Sales Growth.1
+0               10 Years:                       -6%
+1                5 Years:                       -4%
+2                3 Years:                       -3%
+3                    TTM:                       13%  Compounded Profit Growth Compounded Profit Growth.1
+0                10 Years:                          %
+1                 5 Years:                          %
+2                 3 Years:                        22%
+3                     TTM:                      -277%  Stock Price CAGR Stock Price CAGR.1
+0        10 Years:                -7%
+1         5 Years:               -12%
+2         3 Years:                32%
+3          1 Year:               -34%  Return on Equity Return on Equity.1
+0        10 Years:                -1%
+1         5 Years:                -7%
+2         3 Years:               -23%
+3       Last Year:                -6%            Unnamed: 0  Mar 2011  Mar 2012  Mar 2013  Mar 2014  Mar 2015  ...  Mar 2018  Mar 2019  Mar 2020  Mar 2021  Mar 2022  Sep 2022
+0      Share Capital +        79        79        79        79        79  ...        79        79        79        79        79        88
+1             Reserves      1503      1538      1582      1557      1578  ...      1580       344       131       112       102       110
+2         Borrowings +      1228      1031       809       709       727  ...       565       463       407       332       287       272
+3  Other Liabilities +      1854      2386      2873      3159      3119  ...      2947      4844      5130      5085      4992      4874
+4    Total Liabilities      4664      5034      5343      5504      5503  ...      5170      5729      5747      5607      5459      5344
+5       Fixed Assets +       104       109       113       106       103  ...        37        16        14         9         8         7
+6                 CWIP         1         0        14        22        17  ...         0         0         0         0         0         1
+7          Investments       215       453       546       567       577  ...       639       629       555       541       546       502
+8       Other Assets +      4344      4472      4670      4809      4804  ...      4495      5084      5178      5058      4906      4835
+9         Total Assets      4664      5034      5343      5504      5503  ...      5170      5729      5747      5607      5459      5344
+
+[10 rows x 14 columns]                       Unnamed: 0  Mar 2011  Mar 2012  Mar 2013  Mar 2014  ...  Mar 2018  Mar 2019  Mar 2020  Mar 2021  Mar 2022
+0  Cash from Operating Activity +         4       687       489       243  ...       178       163       118        99        92
+1  Cash from Investing Activity +       -40      -239      -113       -26  ...        24        35       -10        16        -2
+2  Cash from Financing Activity +        77      -459      -380      -213  ...      -209      -201      -110      -116       -83
+3                   Net Cash Flow        40       -10        -4         4  ...        -7        -3        -1        -1         7
+
+[4 rows x 13 columns]              Unnamed: 0 Mar 2011 Mar 2012 Mar 2013 Mar 2014 Mar 2015 Mar 2016 Mar 2017 Mar 2018 Mar 2019 Mar 2020 Mar 2021 Mar 2022
+0            Debtor Days      245      118      173      201      254      339      322      343      103       40      103      123
+1         Inventory Days      NaN      NaN      NaN      NaN    19602      NaN      NaN      NaN      NaN      NaN      NaN      NaN
+2           Days Payable      NaN      NaN      NaN      NaN     8803      NaN      NaN      NaN      NaN      NaN      NaN      NaN
+3  Cash Conversion Cycle      245      118      173      201    11054      339      322      343      103       40      103      123
+4   Working Capital Days      396      313      249      315      379      447      540      526     -283     -322     -288     -399
+5                 ROCE %       8%       5%       5%       3%       2%       2%       2%       3%       5%      -2%       7%      10%    Unnamed: 0  Jun 2020  Sep 2020  Dec 2020  Mar 2021  Jun 2021  Sep 2021  Dec 2021  Mar 2022  Jun 2022  Sep 2022  Dec 2022  Mar 2023
+0  Promoters +     48.77     48.77     48.77     48.77     48.77     48.77     48.77     48.77     48.77     48.77     48.77     48.77
+1       FIIs +      2.15      2.15      2.15      1.84      1.83      1.83      1.86      1.87      1.50      1.08      1.10      1.08
+2       DIIs +      2.69      2.69      2.69      2.68      2.69      1.99      1.73      1.74      1.74      1.73      1.73      1.73
+3     Public +     46.39     46.39     46.39     46.70     46.71     47.40     47.63     47.62     47.99     48.42     48.40     48.42    Unnamed: 0  Mar 2017  Mar 2018  Mar 2019  Mar 2020  Mar 2021  Mar 2022  Mar 2023
+0  Promoters +     49.07     48.58     48.77     48.77     48.77     48.77     48.77
+1       FIIs +      7.63      1.51      2.15      2.15      1.84      1.87      1.08
+2       DIIs +      2.86      2.76      2.74      2.69      2.68      1.74      1.73
+3     Public +     40.44     47.16     46.34     46.39     46.70     47.62     48.42
