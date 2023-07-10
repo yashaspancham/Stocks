@@ -1,9 +1,6 @@
 import pandas
 import requests
-import csv
 from bs4 import BeautifulSoup
-import shutil
-import os
 import time
 
 start_point=time.time()
@@ -19,26 +16,17 @@ for Security_Code in Security_Code_list:
     try:
         if number_of_stocks == 10000:
             exit(0)
-        print(Security_Code)
         address = "https://www.screener.in/company/" + Security_Code + "/"
-        equity = pandas.read_html(address)
-        
-        with open('/home/yashas/Desktop/Quant/DATA/' + Security_Code + '.txt', 'w') as file:
-            file.write(''.join(str(item) for item in equity))
-        
         request = requests.get(address)
         soup = BeautifulSoup(request.content, 'html.parser')
         html_data = request.content
-        
-        with open('/home/yashas/Desktop/Quant/DATA/' + Security_Code + '.html', "w") as file:
+        with open('/home/yashas/Desktop/Quant/NEW_DATA/' + Security_Code + '.html', "w") as file:
             file.write(html_data.decode("utf-8"))
         
-        os.makedirs("/home/yashas/Desktop/Quant/DATA/" + Security_Code)
-        shutil.move("/home/yashas/Desktop/Quant/DATA/" + Security_Code + ".txt", "/home/yashas/Desktop/Quant/DATA/" + Security_Code)
-        shutil.move('/home/yashas/Desktop/Quant/DATA/' + Security_Code + '.html', "/home/yashas/Desktop/Quant/DATA/" + Security_Code)
     except Exception:
         print(f"unable to download: {Security_Code}")
         failed_number_of_stocks+=1
+    time.sleep(1)
     number_of_stocks += 1
     
 end_point=time.time()
