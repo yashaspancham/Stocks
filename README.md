@@ -9,3 +9,4 @@ Stocks
 5.net_net.py does not provide any equity as the market is too efficient for it to work effectively.\n
 6.Stock_auto.py was the first scan written in this project, and it is an earlier version of net_net.py. It also does not work for the same reason.\n
 7.Other files here are currently under development\n
+#updated#\n
