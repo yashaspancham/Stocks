@@ -15,7 +15,7 @@ for security_code in Security_Code_list:
         break
     security_code = str(security_code)
     try:
-        data = pandas.read_html("/home/yashas/Desktop/Quant/DATA/" + security_code + "/" + security_code + ".html")
+        data = pandas.read_html("/home/yashas/Desktop/Quant/NEW_DATA/" + security_code + "/" + security_code + ".html")
         PandL = data[1].copy().transpose()
         sales = PandL[0].copy().tolist()
         OPMp = PandL[3].copy().tolist()
@@ -28,7 +28,7 @@ for security_code in Security_Code_list:
         OPMp_flag=tools.OPMp_check(OPMp)
 
         # To check if P/E condition is met
-        with open("/home/yashas/Desktop/Quant/DATA/" + security_code + "/" + security_code + ".html", "r") as file:
+        with open("/home/yashas/Desktop/Quant/NEW_DATA/" + security_code + "/" + security_code + ".html", "r") as file:
             html_content = file.read()
 
         soup = BeautifulSoup(html_content, 'html.parser')
