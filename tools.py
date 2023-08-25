@@ -49,3 +49,16 @@ def Stock_PtoE_check(stock_PtoE):#to check P/E<=20(currently)
         if float(stock_PtoE) <= 20:
             PtoE_flag = 1
     return PtoE_flag
+
+def convert_to_number(number):
+    if type(number)==int:
+        return float(number)
+    if type(number) == float:
+        return number
+    if "," in number:
+        number=number.replace(",","")
+    if ""==number:
+        number=0
+    if "NaN"==number:
+        number=0
+    return float(number)
