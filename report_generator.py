@@ -33,7 +33,7 @@ for code in security_codes:
     stock_pe=stock_pe.replace("\n","")
     stock_pe=stock_pe.replace("Stock P/E","")
     stock_pe=stock_pe.replace(" ","")
-    report.add_paragraph(f"Market Cap: {market_cap}Cr, Stock P/E: {stock_pe}")
+    report.add_paragraph(f"Market Cap: {market_cap}Cr\nStock P/E: {stock_pe}")
     #about
     about_element = soup.findAll('div', class_="sub show-more-box about")
     about=""
@@ -58,6 +58,11 @@ for code in security_codes:
     pros=pros.replace("Pros\n","")
     report.add_heading("Pros",level=2)
     report.add_paragraph(pros)
+        #link for latest annual report
+    annual_report=soup.findAll("a",class_="plausible-event-name=Annual+Report plausible-event-user=unregistered")
+    for i in annual_report:
+        link=i.get("href")
+    report.add_paragraph(f"Link for latest annual report: {link}")
     #Sales,OperatingProfit & NetProfits and Cash Flow
     tables=pandas.read_html("/home/yashas/Desktop/Quant/NEW_DATA/"+code+".html")
     PandL=tables[1].copy()
@@ -102,27 +107,6 @@ for code in security_codes:
     report.add_heading("Sales,Operating Profit, Net Profits and Net Cash Flow",level=2)
     report.add_picture("/home/yashas/Desktop/Quant/report/"+code+".png",width=Inches(4.5))
     plt.close()
-    '''
-    #Cash Flows
-    cash_flow=tables[7].copy()
-    cash_flow=cash_flow.transpose()
-    x=cash_flow.index
-    x=x[-5:]
-    net_cash_flow=cash_flow[3].copy()
-    net_cash_flow=list(net_cash_flow)
-    net_cash_flow_num=[]
-    net_cash_flow=net_cash_flow[1:]
-    for i in net_cash_flow:
-        net_cash_flow_num.append(tools.convert_to_number(i))
-    plt.plot(x,net_cash_flow_num[-5:],label="Net Cash Flow")
-    plt.xlabel("Year")
-    plt.ylabel("Amount")
-    plt.legend()
-    plt.title("Net Cash Flow")
-    plt.savefig("/home/yashas/Desktop/Quant/report/"+code+".png")
-    report.add_heading("Cash Flows",level=2)
-    report.add_picture("/home/yashas/Desktop/Quant/report/"+code+".png",width=Inches(5.5))
-    plt.close()'''
     #Shareholding Pattern
     try:
         shareholding_pattern=tables[9].copy()
@@ -150,5 +134,6 @@ for code in security_codes:
         traceback.print_exc()
         print("No Shareholding data found")
         report.add_paragraph("No Shareholding data found")
-    #report.save("/home/yashas/Desktop/Quant/report/"+code+".docx")
-    #print(f"Report for {company_name} saved")
+    #saving the docx file
+    report.save("/home/yashas/Desktop/Quant/report/"+code+".docx")
+    print(f"Report for {company_name} saved")
