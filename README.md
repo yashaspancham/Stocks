@@ -8,5 +8,7 @@
 3.Equity.csv contains the list of equities on BSE, which can be found at https://www.bseindia.com/corporates/List_Scrips.html.
 4.It takes approximately 2 hours to run download_data.py and around 10 minutes to run Bro'sScan.py.
 5.net_net.py does not provide any equity as the market is too efficient for it to work effectively.
-6.Stock_auto.py was the first scan written in this project, and it is an earlier version of net_net.py. It also does not work for the same reason.
-7.Other files here are currently under development
+6.report_generator.py generates a simple report for any stock by taking security code as input.
+7.tools.py and report_tools.py contains functions used by Bro'sScan and report_generator.py.
+8.Stock_auto.py was the first scan written in this project, and it is an earlier version of net_net.py. It also does not work for the same reason.
+9.Other files here are currently under development
