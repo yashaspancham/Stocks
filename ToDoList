@@ -1,0 +1,7 @@
+The programmer has plans and this file contains them. # means the task is done.
+1.Design a database of stocks
+2.Impliment the designed database
+3.Write a script which will update the database using data in DATA folder
+4.Make the database and the updating script in cloud
+5.Make the database auto update
+6.Create more scripts
