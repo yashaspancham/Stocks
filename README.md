@@ -12,3 +12,5 @@
 7.tools.py and report_tools.py contains functions used by Bro'sScan and report_generator.py.
 8.Stock_auto.py was the first scan written in this project, and it is an earlier version of net_net.py. It also does not work for the same reason.
 9.Other files here are currently under development
+
+Look at the ToDoList to see what is in plan for the project
