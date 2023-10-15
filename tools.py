@@ -1,13 +1,13 @@
 import pandas
 
 def stock_ticker_list():
-    stock_list = pandas.read_csv("/home/yashas/Desktop/Quant/NET_NET/Equity.csv")
+    stock_list = pandas.read_csv("/home/yashas/Desktop/Stocks/Equity.csv")
     stock_list=stock_list.transpose()
     ticker_list=stock_list.iloc[1]
     return ticker_list
 
 def stock_security_list():
-    stock_list = pandas.read_csv("/home/yashas/Desktop/Quant/NET_NET/Equity.csv")
+    stock_list = pandas.read_csv("/home/yashas/Desktop/Stocks/Equity.csv")
     Security_Code_list = stock_list.index.to_list()
     return Security_Code_list
 

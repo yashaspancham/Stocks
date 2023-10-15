@@ -15,7 +15,7 @@ for security_code in Security_Code_list:
         break
     security_code = str(security_code)
     try:
-        data = pandas.read_html("/home/yashas/Desktop/Quant/NEW_DATA/" + security_code + "/" + security_code + ".html")
+        data = pandas.read_html("/home/yashas/Desktop/Stocks/DATA/" + security_code + ".html")
         PandL = data[1].copy().transpose()
         sales = PandL[0].copy().tolist()
         OPMp = PandL[3].copy().tolist()
@@ -28,7 +28,7 @@ for security_code in Security_Code_list:
         OPMp_flag=tools.OPMp_check(OPMp)
 
         # To check if P/E condition is met
-        with open("/home/yashas/Desktop/Quant/NEW_DATA/" + security_code + "/" + security_code + ".html", "r") as file:
+        with open("/home/yashas/Desktop/Stocks/DATA/" + security_code + ".html", "r") as file:
             html_content = file.read()
 
         soup = BeautifulSoup(html_content, 'html.parser')
@@ -41,8 +41,9 @@ for security_code in Security_Code_list:
         if PtoE_flag == 1 and sales_flag == 1 and OPMp_flag == 1:
             final_list.append(security_code)
             print(final_list)
-    except Exception:
+    except Exception as e:
         print(f"failed to prcocess: {security_code}")
+        print(str(e))
         filed_count+=1
     count += 1
 

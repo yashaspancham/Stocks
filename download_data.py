@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import time
 
 start_point=time.time()
-stock_list = pandas.read_csv("/home/yashas/Desktop/Quant/NET_NET/Equity.csv")
+stock_list = pandas.read_csv("/home/yashas/Desktop/Stocks/Equity.csv")
 Security_Code_list = stock_list.index.to_list()
 number_of_stocks = 0
 failed_number_of_stocks=0
@@ -20,7 +20,7 @@ for Security_Code in Security_Code_list:
         request = requests.get(address)
         soup = BeautifulSoup(request.content, 'html.parser')
         html_data = request.content
-        with open('/home/yashas/Desktop/Quant/NEW_DATA/' + Security_Code + '.html', "w") as file:
+        with open('/home/yashas/Desktop/Stocks/DATA/' + Security_Code + '.html', "w") as file:
             file.write(html_data.decode("utf-8"))
         
     except Exception:
